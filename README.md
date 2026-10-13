@@ -12,3 +12,6 @@ Cancella il suo blocco da `moto.js` (le foto in `img/` si possono cancellare). P
 
 ## Contatti
 Numero WhatsApp ed email sono in `index.html`, nello script "contatti montati via script".
+
+## Se cambi una foto ma online vedi la vecchia
+Hai sostituito una foto tenendo lo stesso nome? In `moto.js` cambia il valore `VER` (per esempio con la data di oggi) e, in `index.html`, il numero dopo `moto.js?v=`.

@@ -152,7 +152,7 @@ footer .brand{font-size:1.6rem}
   <figcaption id="lbcap"></figcaption>
 </div>
 
-<script src="moto.js"></script>
+<script src="moto.js?v=20261013b"></script>
 <script>
 const SETS=MOTO.map(m=>m.foto);
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -169,7 +169,7 @@ const el=document.getElementById('elenco');
 el.innerHTML=MOTO.map(m=>`
   <section class="moto" id="${esc(m.id)}">
     <div class="hero" style="padding-top:0">
-      <figure class="hero-photo"><img src="img/${esc(m.foto[0][0])}" alt="${esc(m.foto[0][1])}" data-g="${MOTO.indexOf(m)}"></figure>
+      <figure class="hero-photo"><img src="img/${esc(m.foto[0][0])}?v=${VER}" alt="${esc(m.foto[0][1])}" data-g="${MOTO.indexOf(m)}"></figure>
       <div>
         <div class="eyebrow">${esc(m.eyebrow)}</div>
         <h2 class="titolo">${esc(m.titolo)} <span class="script">${esc(m.corsivo)}</span></h2>
@@ -199,13 +199,13 @@ window.addEventListener('hashchange',()=>dalHash(true));
 dalHash(false);
 const lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap');
 let cur=0,g=0;
-function show(i){const F=SETS[g];cur=(i+F.length)%F.length;li.src='img/'+F[cur][0];li.alt=F[cur][1];lc.textContent=(cur+1)+' / '+F.length+' · '+F[cur][1];}
+function show(i){const F=SETS[g];cur=(i+F.length)%F.length;li.src='img/'+F[cur][0]+'?v='+VER;li.alt=F[cur][1];lc.textContent=(cur+1)+' / '+F.length+' · '+F[cur][1];}
 function open(gi,i){g=gi;show(i);lb.hidden=false;lb.querySelector('.x').focus();}
 el.querySelectorAll('.gallery').forEach((gal,gi)=>SETS[gi].forEach(([f,c,tall],i)=>{
   const b=document.createElement('button');
   if(tall)b.className='tall';
   b.setAttribute('aria-label','Apri foto: '+c);
-  b.innerHTML=`<img src="img/${esc(f)}" alt="${esc(c)}" loading="lazy">`;
+  b.innerHTML=`<img src="img/${esc(f)}?v=${VER}" alt="${esc(c)}" loading="lazy">`;
   b.onclick=()=>open(gi,i);gal.appendChild(b);
 }));
 el.querySelectorAll('.hero-photo img').forEach(im=>im.onclick=()=>open(+im.dataset.g,0));

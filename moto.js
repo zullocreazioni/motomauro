@@ -1,6 +1,9 @@
 // Elenco delle moto in vendita. Per AGGIUNGERE una moto: copia un blocco, cambia i dati,
 // metti le foto in img/. Per TOGLIERLA: cancella il blocco (o metti stato:"venduta").
 // L'ordine qui è l'ordine nella pagina. Vedi README.md.
+// Versione delle foto: cambia questo valore (es. la data) ogni volta che SOSTITUISCI una foto con lo stesso nome,
+// altrimenti i browser mostrano la vecchia copia in cache.
+const VER="20261013b";
 const MOTO=[
 {
   id:"lambretta-j50",              // univoco, minuscolo, senza spazi (è il link #lambretta-j50)
