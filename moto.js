@@ -49,7 +49,7 @@ const MOTO=[
   titolo:"Moto Morini Corsarino", corsivo:"del 1968",
   eyebrow:"In vetrina · Moto Morini · 50 cc 4 tempi",
   lead:"Motore 4 tempi a benzina (niente miscela), cambio a 4 marce a pedale. Restaurata, già immatricolata.",
-  prezzo:"Prezzo su richiesta", prezzoNota:"Bussolengo (VR)",
+  prezzo:"€ 2.100", prezzoNota:"Bussolengo (VR)",
   stato:"disponibile",
   dettagli:[
     ["Modello","Moto Morini Corsarino 50"],
