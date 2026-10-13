@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <title>Le moto di Mauro</title>
-<meta name="description" content="Moto e scooter d'epoca restaurati in vendita: Lambretta J50 (1967) e Moto Morini Corsarino 50 (1968)">
+<meta name="description" content="Moto e scooter d'epoca restaurati in vendita da Mauro, Bussolengo (VR)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -44,8 +44,8 @@ a{color:inherit}
 .hero-photo{margin:0;border-radius:4px;overflow:hidden;background:#A6ADB0;aspect-ratio:4/3;max-width:100%}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
 .eyebrow{font-family:var(--head);font-weight:600;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;color:var(--celeste-deep)}
-h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);line-height:.95;margin:.3rem 0 .8rem;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
-h1 .script{display:block;font-family:var(--display);text-transform:none;font-weight:400;color:var(--navy);font-size:.8em;letter-spacing:0;margin-top:.15em}
+h1,.titolo{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);line-height:.95;margin:.3rem 0 .8rem;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
+.titolo .script{display:block;font-family:var(--display);text-transform:none;font-weight:400;color:var(--navy);font-size:.8em;letter-spacing:0;margin-top:.15em}
 .lead{color:var(--muted);max-width:40ch;margin:0 0 1.2rem}
 .price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-block:14px;border-block:1px solid var(--line);margin-bottom:18px}
 .price b{font-family:var(--head);font-size:2rem;font-weight:700}
@@ -54,6 +54,11 @@ h1 .script{display:block;font-family:var(--display);text-transform:none;font-wei
 .status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.8rem;margin-left:14px;color:var(--muted)}
 .status i{width:9px;height:9px;border-radius:50%;background:#3E9B6B;display:inline-block}
 
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.moto{padding-block:40px}
+.moto:first-of-type{border-top:0}
+.moto .gallery{margin-block:36px 40px}
+.status.venduta i{background:#9A3B3B}.status.riservata i{background:#C99A2E}
 /* sections */
 section{padding-block:40px;border-top:1px solid var(--line)}
 h2{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.8rem;margin:0 0 18px}
@@ -113,97 +118,21 @@ footer .brand{font-size:1.6rem}
 <div class="wrap">
   <header class="top">
     <div class="brand">Mauro <small>Moto d'epoca</small></div>
-    <nav><a href="#foto">Lambretta</a><a href="#corsarino">Corsarino</a><a href="#contatti">Contatti</a></nav>
+    <nav id="nav"></nav>
   </header>
 
-  <div class="hero">
-    <figure class="hero-photo"><img src="img/lato-sinistro.jpg" alt="Lambretta J50 azzurra, vista laterale sinistra" data-i="0"></figure>
-    <div>
-      <div class="eyebrow">In vetrina · Innocenti · 50 cc</div>
-      <h1>Lambretta J50 <span class="script">del 1967</span></h1>
-      <p class="lead">Prima immatricolazione giugno 1967. Ristrutturazione completa, tutti i pezzi originali, motore originale revisionato. Funzionante, con libretto originale e bolli d'epoca pagati.</p>
-      <div class="price"><b>€ 3.150</b><span>trattabile · Bussolengo (VR) · consegna entro 150 km</span></div>
-      <a class="btn" href="#contatti">Contatta Mauro</a>
-      <span class="status"><i></i>Disponibile</span>
-    </div>
-  </div>
-
-  <section id="foto">
-    <h2>Foto</h2>
-    <div class="gallery" id="gal"></div>
-  </section>
-
-  <section id="dettagli">
-    <h2>Dettagli</h2>
-    <div class="details">
-      <dl>
-        <dt>Modello</dt><dd>Innocenti Lambretta J50</dd>
-        <dt>Immatricolazione</dt><dd>30/06/1967</dd>
-        <dt>Cilindrata</dt><dd>50 cc</dd>
-        <dt>Colore</dt><dd>Azzurro, sella blu</dd>
-        <dt>Stato</dt><dd>Funzionante</dd>
-        <dt>Documenti</dt><dd>Libretto originale con bolli d'epoca</dd>
-        <dt>Luogo</dt><dd>Bussolengo (VR)</dd>
-        <dt>Consegna</dt><dd>Consegna a cura del venditore entro 150 km</dd>
-      </dl>
-      <ul class="feat">
-        <li>Ristrutturazione completa</li>
-        <li>Tutti i pezzi originali</li>
-        <li>Motore originale revisionato, funzionante</li>
-        <li>Portapacchi originale</li>
-        <li>Portaruota originale con ruota di scorta</li>
-        <li>Libretto originale con i bolli d'epoca pagati</li>
-        <li>Portabollo d'epoca con santino di Papa Giovanni XXIII</li>
-        <li>Sella biposto blu, adesivo d'epoca Tamoil sullo scudo</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="corsarino">
-    <div class="hero" style="padding-top:0">
-      <figure class="hero-photo"><img src="img/corsarino-lato.jpg" alt="Moto Morini Corsarino 50 rossa, vista laterale" data-g="1"></figure>
-      <div>
-        <div class="eyebrow">In vetrina · Moto Morini · 50 cc 4 tempi</div>
-        <h1>Moto Morini Corsarino <span class="script">del 1968</span></h1>
-        <p class="lead">Motore 4 tempi a benzina (niente miscela), cambio a 4 marce a pedale. Restaurata, già immatricolata.</p>
-        <div class="price"><b>Prezzo su richiesta</b><span>Bussolengo (VR)</span></div>
-        <a class="btn" href="#contatti">Contatta Mauro</a>
-        <span class="status"><i></i>Disponibile</span>
-      </div>
-    </div>
-    <div class="gallery" id="gal2" style="margin-bottom:40px"></div>
-    <div class="details">
-      <dl>
-        <dt>Modello</dt><dd>Moto Morini Corsarino 50</dd>
-        <dt>Anno</dt><dd>1968</dd>
-        <dt>Cilindrata</dt><dd>50 cc</dd>
-        <dt>Motore</dt><dd>4 tempi, benzina (no miscela)</dd>
-        <dt>Cambio</dt><dd>4 marce a pedale</dd>
-        <dt>Colore</dt><dd>Rosso, serbatoio con pannelli bianchi</dd>
-        <dt>Stato</dt><dd>Restaurato, già immatricolato</dd>
-        <dt>Luogo</dt><dd>Bussolengo (VR)</dd>
-      </dl>
-      <ul class="feat">
-        <li>Restauro completo</li>
-        <li>Già immatricolata</li>
-        <li>Motore 4 tempi: benzina, niente miscela</li>
-        <li>Cambio a 4 marce a pedale</li>
-        <li>Revisione a carico del venditore in caso di vendita</li>
-        <li>Passaggio di proprietà a carico dell'acquirente</li>
-      </ul>
-    </div>
-  </section>
+  <h1 class="sr">Le moto di Mauro</h1>
+  <main id="elenco"></main>
 
   <section id="contatti">
     <h2>Contatti</h2>
     <div class="contact">
-      <p style="margin:0;max-width:48ch">Per informazioni, altre foto o per vedere le moto dal vivo a Bussolengo, scrivi a Mauro su WhatsApp o per email. La Lambretta può essere consegnata da lui stesso entro 150 km.</p>
+      <p style="margin:0;max-width:48ch">Per informazioni, altre foto o per vedere le moto dal vivo a Bussolengo, scrivi a Mauro su WhatsApp o per email. Indica quale moto ti interessa.</p>
       <div class="card">
         <div class="row"><span class="k">Nome</span><span class="v">Mauro</span></div>
         <div class="row"><span class="k">WhatsApp</span><a class="btn wa" id="wa" href="#contatti" target="_blank" rel="noopener">Scrivi su WhatsApp</a></div>
         <div class="row"><span class="k">Email</span><span class="v" id="mail">…</span><button class="copy" data-t="mail">Copia</button></div>
         <div class="row"><span class="k">Sede</span><span class="v">Bussolengo (VR)</span></div>
-        <div class="row"><span class="k">Consegna Lambretta</span><span class="v">entro 150 km</span></div>
       </div>
     </div>
   </section>
@@ -222,19 +151,11 @@ footer .brand{font-size:1.6rem}
   <figcaption id="lbcap"></figcaption>
 </div>
 
+<script src="moto.js"></script>
 <script>
-const SETS=[[
-  ["lato-sinistro.jpg","Lambretta J50, lato sinistro"],
-  ["tre-quarti.jpg","Lambretta J50, tre quarti posteriore"],
-  ["frontale.jpg","Lambretta J50, frontale",true],
-  ["lato-destro.jpg","Lambretta J50, lato destro"],
-  ["posteriore.jpg","Lambretta J50, posteriore e sella"],
-  ["bollo.jpg","Lambretta J50, portaruota originale e portabollo con santino di Papa Giovanni XXIII"]
-],[
-  ["corsarino-lato.jpg","Corsarino, lato destro con scarico"],
-  ["corsarino-posteriore.jpg","Corsarino, lato sinistro"],
-  ["corsarino-frontale.jpg","Corsarino, tre quarti anteriore",true]
-]];
+const SETS=MOTO.map(m=>m.foto);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const STATO={disponibile:"Disponibile",riservata:"Riservata",venduta:"Venduta"};
 // contatti montati via script: niente numero/email in chiaro nel sorgente
 (function(){
   const n=[51,57,51,51,57,54,52,52,48,52,48,54].map(c=>String.fromCharCode(c)).join('');
@@ -243,21 +164,39 @@ const SETS=[[
   const u=['Tama','bruna'].join(''),d=['tiscali','it'].join('.');
   document.getElementById('mail').textContent=u+'@'+d;
 })();
+const el=document.getElementById('elenco');
+el.innerHTML=MOTO.map(m=>`
+  <section class="moto" id="${esc(m.id)}">
+    <div class="hero" style="padding-top:0">
+      <figure class="hero-photo"><img src="img/${esc(m.foto[0][0])}" alt="${esc(m.foto[0][1])}" data-g="${MOTO.indexOf(m)}"></figure>
+      <div>
+        <div class="eyebrow">${esc(m.eyebrow)}</div>
+        <h2 class="titolo">${esc(m.titolo)} <span class="script">${esc(m.corsivo)}</span></h2>
+        <p class="lead">${esc(m.lead)}</p>
+        <div class="price"><b>${esc(m.prezzo)}</b><span>${esc(m.prezzoNota||'')}</span></div>
+        <a class="btn" href="#contatti">Contatta Mauro</a>
+        <span class="status ${esc(m.stato)}"><i></i>${STATO[m.stato]||esc(m.stato)}</span>
+      </div>
+    </div>
+    <div class="gallery"></div>
+    <div class="details">
+      <dl>${m.dettagli.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+      <ul class="feat">${m.punti.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
+    </div>
+  </section>`).join('');
+document.getElementById('nav').innerHTML=MOTO.map(m=>`<a href="#${esc(m.id)}">${esc(m.nav||m.titolo)}</a>`).join('')+'<a href="#contatti">Contatti</a>';
 const lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap');
 let cur=0,g=0;
 function show(i){const F=SETS[g];cur=(i+F.length)%F.length;li.src='img/'+F[cur][0];li.alt=F[cur][1];lc.textContent=(cur+1)+' / '+F.length+' · '+F[cur][1];}
 function open(gi,i){g=gi;show(i);lb.hidden=false;lb.querySelector('.x').focus();}
-['gal','gal2'].forEach((id,gi)=>{
-  const el=document.getElementById(id);
-  SETS[gi].forEach(([f,c,tall],i)=>{
-    const b=document.createElement('button');
-    if(tall)b.className='tall';
-    b.setAttribute('aria-label','Apri foto: '+c);
-    b.innerHTML=`<img src="img/${f}" alt="${c}" loading="lazy">`;
-    b.onclick=()=>open(gi,i);el.appendChild(b);
-  });
-});
-document.querySelectorAll('.hero-photo img').forEach(im=>im.onclick=()=>open(+(im.dataset.g||0),0));
+el.querySelectorAll('.gallery').forEach((gal,gi)=>SETS[gi].forEach(([f,c,tall],i)=>{
+  const b=document.createElement('button');
+  if(tall)b.className='tall';
+  b.setAttribute('aria-label','Apri foto: '+c);
+  b.innerHTML=`<img src="img/${esc(f)}" alt="${esc(c)}" loading="lazy">`;
+  b.onclick=()=>open(gi,i);gal.appendChild(b);
+}));
+el.querySelectorAll('.hero-photo img').forEach(im=>im.onclick=()=>open(+im.dataset.g,0));
 lb.querySelector('.x').onclick=()=>lb.hidden=true;
 lb.querySelector('.p').onclick=e=>{e.stopPropagation();show(cur-1)};
 lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(cur+1)};
