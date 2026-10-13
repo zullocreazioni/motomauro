@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <title>Le moto di Mauro</title>
-<meta name="description" content="Scooter d'epoca restaurato in vendita">
+<meta name="description" content="Moto e scooter d'epoca restaurati in vendita: Lambretta J50 (1967) e Moto Morini Corsarino 50 (1968)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -77,9 +77,6 @@ ul.feat li{padding-left:22px;position:relative}
 ul.feat li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--celeste-deep)}
 
 /* next bike */
-.next{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--celeste);border-radius:4px;padding:22px 24px;margin-top:8px}
-.next .n{font-family:var(--display);font-size:3rem;color:var(--navy);line-height:1}
-.next p{margin:0}
 
 /* contact */
 .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
@@ -116,7 +113,7 @@ footer .brand{font-size:1.6rem}
 <div class="wrap">
   <header class="top">
     <div class="brand">Mauro <small>Moto d'epoca</small></div>
-    <nav><a href="#foto">Foto</a><a href="#dettagli">Dettagli</a><a href="#contatti">Contatti</a></nav>
+    <nav><a href="#foto">Lambretta</a><a href="#corsarino">Corsarino</a><a href="#contatti">Contatti</a></nav>
   </header>
 
   <div class="hero">
@@ -160,22 +157,53 @@ footer .brand{font-size:1.6rem}
         <li>Sella biposto blu, adesivo d'epoca Tamoil sullo scudo</li>
       </ul>
     </div>
-    <div class="next">
-      <div class="n">2</div>
-      <p><strong>Seconda moto in arrivo.</strong> A breve in vetrina un altro mezzo d'epoca di Mauro.</p>
+  </section>
+
+  <section id="corsarino">
+    <div class="hero" style="padding-top:0">
+      <figure class="hero-photo"><img src="img/corsarino-lato.jpg" alt="Moto Morini Corsarino 50 rossa, vista laterale" data-g="1"></figure>
+      <div>
+        <div class="eyebrow">In vetrina · Moto Morini · 50 cc 4 tempi</div>
+        <h1>Moto Morini Corsarino <span class="script">del 1968</span></h1>
+        <p class="lead">Motore 4 tempi a benzina (niente miscela), cambio a 4 marce a pedale. Restaurata, già immatricolata.</p>
+        <div class="price"><b>Prezzo su richiesta</b><span>Bussolengo (VR)</span></div>
+        <a class="btn" href="#contatti">Contatta Mauro</a>
+        <span class="status"><i></i>Disponibile</span>
+      </div>
+    </div>
+    <div class="gallery" id="gal2" style="margin-bottom:40px"></div>
+    <div class="details">
+      <dl>
+        <dt>Modello</dt><dd>Moto Morini Corsarino 50</dd>
+        <dt>Anno</dt><dd>1968</dd>
+        <dt>Cilindrata</dt><dd>50 cc</dd>
+        <dt>Motore</dt><dd>4 tempi, benzina (no miscela)</dd>
+        <dt>Cambio</dt><dd>4 marce a pedale</dd>
+        <dt>Colore</dt><dd>Rosso, serbatoio con pannelli bianchi</dd>
+        <dt>Stato</dt><dd>Restaurato, già immatricolato</dd>
+        <dt>Luogo</dt><dd>Bussolengo (VR)</dd>
+      </dl>
+      <ul class="feat">
+        <li>Restauro completo</li>
+        <li>Già immatricolata</li>
+        <li>Motore 4 tempi: benzina, niente miscela</li>
+        <li>Cambio a 4 marce a pedale</li>
+        <li>Revisione a carico del venditore in caso di vendita</li>
+        <li>Passaggio di proprietà a carico dell'acquirente</li>
+      </ul>
     </div>
   </section>
 
   <section id="contatti">
     <h2>Contatti</h2>
     <div class="contact">
-      <p style="margin:0;max-width:48ch">Per informazioni, altre foto o per vedere la moto dal vivo a Bussolengo, scrivi a Mauro su WhatsApp o per email. Se preferisci, la consegna lui stesso entro 150 km.</p>
+      <p style="margin:0;max-width:48ch">Per informazioni, altre foto o per vedere le moto dal vivo a Bussolengo, scrivi a Mauro su WhatsApp o per email. La Lambretta può essere consegnata da lui stesso entro 150 km.</p>
       <div class="card">
         <div class="row"><span class="k">Nome</span><span class="v">Mauro</span></div>
         <div class="row"><span class="k">WhatsApp</span><a class="btn wa" id="wa" href="#contatti" target="_blank" rel="noopener">Scrivi su WhatsApp</a></div>
         <div class="row"><span class="k">Email</span><span class="v" id="mail">…</span><button class="copy" data-t="mail">Copia</button></div>
         <div class="row"><span class="k">Sede</span><span class="v">Bussolengo (VR)</span></div>
-        <div class="row"><span class="k">Consegna</span><span class="v">entro 150 km</span></div>
+        <div class="row"><span class="k">Consegna Lambretta</span><span class="v">entro 150 km</span></div>
       </div>
     </div>
   </section>
@@ -195,35 +223,41 @@ footer .brand{font-size:1.6rem}
 </div>
 
 <script>
-const FOTO=[
-  ["lato-sinistro.jpg","Lato sinistro"],
-  ["tre-quarti.jpg","Tre quarti posteriore"],
-  ["frontale.jpg","Frontale",true],
-  ["lato-destro.jpg","Lato destro"],
-  ["posteriore.jpg","Posteriore e sella"],
-  ["bollo.jpg","Portaruota originale e portabollo con santino di Papa Giovanni XXIII"]
-];
+const SETS=[[
+  ["lato-sinistro.jpg","Lambretta J50, lato sinistro"],
+  ["tre-quarti.jpg","Lambretta J50, tre quarti posteriore"],
+  ["frontale.jpg","Lambretta J50, frontale",true],
+  ["lato-destro.jpg","Lambretta J50, lato destro"],
+  ["posteriore.jpg","Lambretta J50, posteriore e sella"],
+  ["bollo.jpg","Lambretta J50, portaruota originale e portabollo con santino di Papa Giovanni XXIII"]
+],[
+  ["corsarino-lato.jpg","Corsarino, lato destro con scarico"],
+  ["corsarino-posteriore.jpg","Corsarino, lato sinistro"],
+  ["corsarino-frontale.jpg","Corsarino, tre quarti anteriore",true]
+]];
 // contatti montati via script: niente numero/email in chiaro nel sorgente
 (function(){
   const n=[51,57,51,51,57,54,52,52,48,52,48,54].map(c=>String.fromCharCode(c)).join('');
-  const msg=encodeURIComponent('Ciao Mauro, ti scrivo per la Lambretta J50 in vendita.');
+  const msg=encodeURIComponent('Ciao Mauro, ti scrivo per una moto in vendita sul tuo sito.');
   document.getElementById('wa').href='https://wa.me/'+n+'?text='+msg;
   const u=['Tama','bruna'].join(''),d=['tiscali','it'].join('.');
   document.getElementById('mail').textContent=u+'@'+d;
 })();
-const gal=document.getElementById('gal');
-FOTO.forEach(([f,c,tall],i)=>{
-  const b=document.createElement('button');
-  if(tall)b.className='tall';
-  b.setAttribute('aria-label','Apri foto: '+c);
-  b.innerHTML=`<img src="img/${f}" alt="${c}" loading="lazy">`;
-  b.onclick=()=>open(i);gal.appendChild(b);
-});
 const lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap');
-let cur=0;
-function show(i){cur=(i+FOTO.length)%FOTO.length;li.src='img/'+FOTO[cur][0];li.alt=FOTO[cur][1];lc.textContent=(cur+1)+' / '+FOTO.length+' · '+FOTO[cur][1];}
-function open(i){show(i);lb.hidden=false;lb.querySelector('.x').focus();}
-document.querySelector('.hero-photo img').onclick=()=>open(0);
+let cur=0,g=0;
+function show(i){const F=SETS[g];cur=(i+F.length)%F.length;li.src='img/'+F[cur][0];li.alt=F[cur][1];lc.textContent=(cur+1)+' / '+F.length+' · '+F[cur][1];}
+function open(gi,i){g=gi;show(i);lb.hidden=false;lb.querySelector('.x').focus();}
+['gal','gal2'].forEach((id,gi)=>{
+  const el=document.getElementById(id);
+  SETS[gi].forEach(([f,c,tall],i)=>{
+    const b=document.createElement('button');
+    if(tall)b.className='tall';
+    b.setAttribute('aria-label','Apri foto: '+c);
+    b.innerHTML=`<img src="img/${f}" alt="${c}" loading="lazy">`;
+    b.onclick=()=>open(gi,i);el.appendChild(b);
+  });
+});
+document.querySelectorAll('.hero-photo img').forEach(im=>im.onclick=()=>open(+(im.dataset.g||0),0));
 lb.querySelector('.x').onclick=()=>lb.hidden=true;
 lb.querySelector('.p').onclick=e=>{e.stopPropagation();show(cur-1)};
 lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(cur+1)};
