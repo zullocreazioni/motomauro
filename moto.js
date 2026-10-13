@@ -69,7 +69,7 @@ const MOTO=[
   foto:[
     ["corsarino-lato.jpg","Corsarino, lato destro con scarico"],
     ["corsarino-posteriore.jpg","Corsarino, lato sinistro"],
-    ["corsarino-frontale.jpg","Corsarino, tre quarti anteriore",true]
+    ["corsarino-frontale.jpg","Corsarino, tre quarti anteriore"]
   ]
 }
 ];
