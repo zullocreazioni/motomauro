@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Le moto di Mauro</title>
+<meta name="description" content="Scooter d'epoca restaurato in vendita">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F3F7F6; --surface:#FFFFFF; --ink:#152033; --muted:#566273;
+  --celeste:#BFE2DF; --celeste-deep:#7FB9B4; --navy:#1E2D5C; --chrome:#9AA3AC;
+  --line:#D6E2E1; --tag:#F2E9C9; --tag-ink:#5A4A12;
+  --display:"Yellowtail","Brush Script MT",cursive;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--paper:#0F1622;--surface:#172131;--ink:#E6EEF0;--muted:#9AA8B6;
+  --celeste:#2B4A4F;--celeste-deep:#8ACFC8;--navy:#A9B8EC;--chrome:#6B7580;--line:#26344A;--tag:#3A3217;--tag-ink:#EBDDA6;}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--paper:#0F1622;--surface:#172131;--ink:#E6EEF0;--muted:#9AA8B6;
+  --celeste:#2B4A4F;--celeste-deep:#8ACFC8;--navy:#A9B8EC;--chrome:#6B7580;--line:#26344A;--tag:#3A3217;--tag-ink:#EBDDA6;}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--celeste-deep);outline-offset:3px}
+
+/* header */
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px 10px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--display);font-size:2.4rem;line-height:1;color:var(--navy)}
+.brand small{font-family:var(--head);font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:.5rem;vertical-align:.4em}
+.top nav{display:flex;gap:20px;font-family:var(--head);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem}
+.top nav a{text-decoration:none;color:var(--muted)} .top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center;padding-block:36px 28px}
+.hero-photo{margin:0;border-radius:4px;overflow:hidden;background:#A6ADB0;aspect-ratio:4/3;max-width:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+.eyebrow{font-family:var(--head);font-weight:600;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;color:var(--celeste-deep)}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);line-height:.95;margin:.3rem 0 .8rem;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
+h1 .script{display:block;font-family:var(--display);text-transform:none;font-weight:400;color:var(--navy);font-size:.8em;letter-spacing:0;margin-top:.15em}
+.lead{color:var(--muted);max-width:40ch;margin:0 0 1.2rem}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-block:14px;border-block:1px solid var(--line);margin-bottom:18px}
+.price b{font-family:var(--head);font-size:2rem;font-weight:700}
+.price span{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.btn{display:inline-block;background:var(--navy);color:var(--paper);font-family:var(--head);font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 22px;border-radius:3px;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.8rem;margin-left:14px;color:var(--muted)}
+.status i{width:9px;height:9px;border-radius:50%;background:#3E9B6B;display:inline-block}
+
+/* sections */
+section{padding-block:40px;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.8rem;margin:0 0 18px}
+.fill{background:var(--tag);color:var(--tag-ink);font-family:var(--mono);font-size:.78em;padding:1px 6px;border-radius:2px;white-space:nowrap}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gallery button{padding:0;border:0;background:#A6ADB0;border-radius:3px;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in;max-width:100%}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.gallery button:hover img{transform:scale(1.04)}
+.gallery .tall{grid-row:span 2;aspect-ratio:auto}
+
+/* details */
+.details{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;column-gap:24px}
+dt,dd{padding-block:10px;border-bottom:1px solid var(--line);margin:0}
+dt{font-family:var(--head);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--muted)}
+dd{font-variant-numeric:tabular-nums}
+ul.feat{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ul.feat li{padding-left:22px;position:relative}
+ul.feat li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--celeste-deep)}
+
+/* next bike */
+.next{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--celeste);border-radius:4px;padding:22px 24px;margin-top:8px}
+.next .n{font-family:var(--display);font-size:3rem;color:var(--navy);line-height:1}
+.next p{margin:0}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.row:last-child{border-bottom:0}
+.row .k{font-family:var(--head);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--muted)}
+.row .v{font-family:var(--mono);font-size:.95rem;user-select:all}
+.btn.wa{background:#1F8F55;color:#fff;padding:9px 16px;font-size:.95rem}
+.copy{font-family:var(--mono);font-size:.75rem;background:none;border:1px solid var(--line);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer .brand{font-size:1.6rem}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,16,26,.92);display:flex;align-items:center;justify-content:center;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px));z-index:10}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:3px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb .x{top:calc(14px + env(safe-area-inset-top,0px));right:14px}
+.lb .p{left:12px;top:50%;transform:translateY(-50%)} .lb .nx{right:12px;top:50%;transform:translateY(-50%)}
+.lb figcaption{position:absolute;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#cfd8de;font-family:var(--mono);font-size:.8rem}
+
+@media (max-width:820px){
+  .hero,.details,.contact{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery .tall{grid-row:auto;aspect-ratio:4/3}
+  .gallery .tall img{object-fit:contain}
+  .top nav{display:none}
+}
+@media (prefers-reduced-motion:reduce){.gallery img{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Mauro <small>Moto d'epoca</small></div>
+    <nav><a href="#foto">Foto</a><a href="#dettagli">Dettagli</a><a href="#contatti">Contatti</a></nav>
+  </header>
+
+  <div class="hero">
+    <figure class="hero-photo"><img src="img/lato-sinistro.jpg" alt="Lambretta J50 azzurra, vista laterale sinistra" data-i="0"></figure>
+    <div>
+      <div class="eyebrow">In vetrina · Innocenti · 50 cc</div>
+      <h1>Lambretta J50 <span class="script">del 1967</span></h1>
+      <p class="lead">Prima immatricolazione giugno 1967. Ristrutturazione completa, tutti i pezzi originali, motore originale revisionato. Funzionante, con libretto originale e bolli d'epoca pagati.</p>
+      <div class="price"><b>€ 3.150</b><span>trattabile · Bussolengo (VR) · consegna entro 150 km</span></div>
+      <a class="btn" href="#contatti">Contatta Mauro</a>
+      <span class="status"><i></i>Disponibile</span>
+    </div>
+  </div>
+
+  <section id="foto">
+    <h2>Foto</h2>
+    <div class="gallery" id="gal"></div>
+  </section>
+
+  <section id="dettagli">
+    <h2>Dettagli</h2>
+    <div class="details">
+      <dl>
+        <dt>Modello</dt><dd>Innocenti Lambretta J50</dd>
+        <dt>Immatricolazione</dt><dd>30/06/1967</dd>
+        <dt>Cilindrata</dt><dd>50 cc</dd>
+        <dt>Colore</dt><dd>Azzurro, sella blu</dd>
+        <dt>Stato</dt><dd>Funzionante</dd>
+        <dt>Documenti</dt><dd>Libretto originale con bolli d'epoca</dd>
+        <dt>Luogo</dt><dd>Bussolengo (VR)</dd>
+        <dt>Consegna</dt><dd>Consegna a cura del venditore entro 150 km</dd>
+      </dl>
+      <ul class="feat">
+        <li>Ristrutturazione completa</li>
+        <li>Tutti i pezzi originali</li>
+        <li>Motore originale revisionato, funzionante</li>
+        <li>Portapacchi originale</li>
+        <li>Portaruota originale con ruota di scorta</li>
+        <li>Libretto originale con i bolli d'epoca pagati</li>
+        <li>Portabollo d'epoca con santino di Papa Giovanni XXIII</li>
+        <li>Sella biposto blu, adesivo d'epoca Tamoil sullo scudo</li>
+      </ul>
+    </div>
+    <div class="next">
+      <div class="n">2</div>
+      <p><strong>Seconda moto in arrivo.</strong> A breve in vetrina un altro mezzo d'epoca di Mauro.</p>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <div class="contact">
+      <p style="margin:0;max-width:48ch">Per informazioni, altre foto o per vedere la moto dal vivo a Bussolengo, scrivi a Mauro su WhatsApp o per email. Se preferisci, la consegna lui stesso entro 150 km.</p>
+      <div class="card">
+        <div class="row"><span class="k">Nome</span><span class="v">Mauro</span></div>
+        <div class="row"><span class="k">WhatsApp</span><a class="btn wa" id="wa" href="#contatti" target="_blank" rel="noopener">Scrivi su WhatsApp</a></div>
+        <div class="row"><span class="k">Email</span><span class="v" id="mail">…</span><button class="copy" data-t="mail">Copia</button></div>
+        <div class="row"><span class="k">Sede</span><span class="v">Bussolengo (VR)</span></div>
+        <div class="row"><span class="k">Consegna</span><span class="v">entro 150 km</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Mauro</div>
+    <div>Vendita tra privati · Foto reali del mezzo</div>
+  </footer>
+</div>
+
+<div class="lb" id="lb" hidden>
+  <img id="lbimg" alt="">
+  <button class="x" aria-label="Chiudi">×</button>
+  <button class="p" aria-label="Foto precedente">‹</button>
+  <button class="nx" aria-label="Foto successiva">›</button>
+  <figcaption id="lbcap"></figcaption>
+</div>
+
+<script>
+const FOTO=[
+  ["lato-sinistro.jpg","Lato sinistro"],
+  ["tre-quarti.jpg","Tre quarti posteriore"],
+  ["frontale.jpg","Frontale",true],
+  ["lato-destro.jpg","Lato destro"],
+  ["posteriore.jpg","Posteriore e sella"],
+  ["bollo.jpg","Portaruota originale e portabollo con santino di Papa Giovanni XXIII"]
+];
+// contatti montati via script: niente numero/email in chiaro nel sorgente
+(function(){
+  const n=[51,57,51,51,57,54,52,52,48,52,48,54].map(c=>String.fromCharCode(c)).join('');
+  const msg=encodeURIComponent('Ciao Mauro, ti scrivo per la Lambretta J50 in vendita.');
+  document.getElementById('wa').href='https://wa.me/'+n+'?text='+msg;
+  const u=['Tama','bruna'].join(''),d=['tiscali','it'].join('.');
+  document.getElementById('mail').textContent=u+'@'+d;
+})();
+const gal=document.getElementById('gal');
+FOTO.forEach(([f,c,tall],i)=>{
+  const b=document.createElement('button');
+  if(tall)b.className='tall';
+  b.setAttribute('aria-label','Apri foto: '+c);
+  b.innerHTML=`<img src="img/${f}" alt="${c}" loading="lazy">`;
+  b.onclick=()=>open(i);gal.appendChild(b);
+});
+const lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap');
+let cur=0;
+function show(i){cur=(i+FOTO.length)%FOTO.length;li.src='img/'+FOTO[cur][0];li.alt=FOTO[cur][1];lc.textContent=(cur+1)+' / '+FOTO.length+' · '+FOTO[cur][1];}
+function open(i){show(i);lb.hidden=false;lb.querySelector('.x').focus();}
+document.querySelector('.hero-photo img').onclick=()=>open(0);
+lb.querySelector('.x').onclick=()=>lb.hidden=true;
+lb.querySelector('.p').onclick=e=>{e.stopPropagation();show(cur-1)};
+lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(cur+1)};
+lb.onclick=e=>{if(e.target===lb)lb.hidden=true};
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lb.hidden=true;if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+document.querySelectorAll('.copy').forEach(b=>b.onclick=()=>{
+  const el=document.getElementById(b.dataset.t),t=el.textContent.trim();
+  navigator.clipboard?.writeText(t).then(()=>{b.textContent='Copiato';setTimeout(()=>b.textContent='Copia',1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);});
+});
+</script>
+</body>
+</html>
