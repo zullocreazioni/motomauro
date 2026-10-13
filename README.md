@@ -4,7 +4,7 @@ Sito statico (GitHub Pages). Si pubblica da solo a ogni push su `main`.
 
 ## Aggiungere una moto
 1. Metti le foto (jpg) nella cartella `img/`.
-2. In `moto.js` copia un blocco `{ ... }` dell'elenco, incollalo (con la virgola tra un blocco e l'altro) e cambia i dati: `id` (unico, senza spazi), titolo, prezzo, `dettagli`, `punti`, `foto`. La prima foto è la copertina; il terzo valore `true` segna una foto verticale.
+2. In `moto.js` copia un blocco `{ ... }` dell'elenco, incollalo (con la virgola tra un blocco e l'altro) e cambia i dati: `id` (unico, senza spazi), titolo, prezzo, `dettagli`, `punti`, `foto`. La prima foto è la copertina; il menu in alto mostra una moto alla volta; il terzo valore `true` segna una foto verticale.
 3. Fatto: la sezione, il menu e il visualizzatore foto si creano da soli.
 
 ## Togliere una moto
