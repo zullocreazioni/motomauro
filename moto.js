@@ -11,7 +11,7 @@ const MOTO=[
   titolo:"Lambretta J50", corsivo:"del 1967",
   eyebrow:"In vetrina · Innocenti · 50 cc",
   lead:"Prima immatricolazione giugno 1967. Ristrutturazione completa, tutti i pezzi originali, motore originale revisionato. Funzionante, con libretto originale e bolli d'epoca pagati.",
-  prezzo:"€ 3.150", prezzoNota:"trattabile · Bussolengo (VR) · consegna entro 150 km",
+  prezzo:"€ 3.150", prezzoNota:"trattabile · Bussolengo (VR)",
   stato:"disponibile",             // "disponibile" | "riservata" | "venduta"
   dettagli:[
     ["Modello","Innocenti Lambretta J50"],

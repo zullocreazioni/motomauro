@@ -60,6 +60,7 @@ h1,.titolo{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,6vw,4.
 .moto:first-of-type{border-top:0}
 .moto .gallery{margin-block:36px 40px}
 .status.venduta i{background:#9A3B3B}.status.riservata i{background:#C99A2E}
+#contatti{scroll-margin-top:80px}
 /* sections */
 section{padding-block:40px;border-top:1px solid var(--line)}
 h2{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.8rem;margin:0 0 18px}
@@ -74,10 +75,10 @@ h2{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spaci
 
 /* details */
 .details{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-dl{margin:0;display:grid;grid-template-columns:max-content 1fr;column-gap:24px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr}
 dt,dd{padding-block:10px;border-bottom:1px solid var(--line);margin:0}
 dt{font-family:var(--head);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--muted)}
-dd{font-variant-numeric:tabular-nums}
+dd{font-variant-numeric:tabular-nums;padding-left:24px}
 ul.feat{margin:0;padding:0;list-style:none;display:grid;gap:10px}
 ul.feat li{padding-left:22px;position:relative}
 ul.feat li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--celeste-deep)}
@@ -109,7 +110,9 @@ footer .brand{font-size:1.6rem}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .gallery .tall{grid-row:auto;aspect-ratio:4/3}
   .gallery .tall img{object-fit:contain}
-  .top nav{width:100%;gap:18px;flex-wrap:wrap;font-size:1rem}
+  .top{flex-wrap:nowrap;align-items:center;padding-block:12px 8px;gap:12px}
+  .brand{font-size:2rem}.brand small{display:none}
+  .top nav{gap:14px;font-size:.88rem;letter-spacing:.05em}
 }
 @media (prefers-reduced-motion:reduce){.gallery img{transition:none}}
 </style>
@@ -152,7 +155,7 @@ footer .brand{font-size:1.6rem}
   <figcaption id="lbcap"></figcaption>
 </div>
 
-<script src="moto.js?v=20261013c"></script>
+<script src="moto.js?v=20261014a"></script>
 <script>
 const SETS=MOTO.map(m=>m.foto);
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -161,6 +164,8 @@ const STATO={disponibile:"Disponibile",riservata:"Riservata",venduta:"Venduta"};
 (function(){
   const n=[51,57,51,51,57,54,52,52,48,52,48,54].map(c=>String.fromCharCode(c)).join('');
   const msg=encodeURIComponent('Ciao Mauro, ti scrivo per una moto in vendita sul tuo sito.');
+  const link=t=>'https://wa.me/'+n+'?text='+encodeURIComponent(t);
+  window.waLink=link;
   document.getElementById('wa').href='https://wa.me/'+n+'?text='+msg;
   const u=['Tama','bruna'].join(''),d=['tiscali','it'].join('.');
   document.getElementById('mail').textContent=u+'@'+d;
@@ -175,7 +180,7 @@ el.innerHTML=MOTO.map(m=>`
         <h2 class="titolo">${esc(m.titolo)} <span class="script">${esc(m.corsivo)}</span></h2>
         <p class="lead">${esc(m.lead)}</p>
         <div class="price"><b>${esc(m.prezzo)}</b><span>${esc(m.prezzoNota||'')}</span></div>
-        <a class="btn" href="#contatti">Contatta Mauro</a>
+        <a class="btn" data-wa="${esc(m.titolo+' '+m.corsivo)}" href="#contatti" target="_blank" rel="noopener">Scrivi a Mauro</a>
         <span class="status ${esc(m.stato)}"><i></i>${STATO[m.stato]||esc(m.stato)}</span>
       </div>
     </div>
@@ -185,6 +190,7 @@ el.innerHTML=MOTO.map(m=>`
       <ul class="feat">${m.punti.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
     </div>
   </section>`).join('');
+el.querySelectorAll('[data-wa]').forEach(a=>a.href=waLink('Ciao Mauro, ti scrivo per la moto in vendita: '+a.dataset.wa+'.'));
 document.getElementById('nav').innerHTML=MOTO.map(m=>`<a href="#${esc(m.id)}">${esc(m.nav||m.titolo)}</a>`).join('')+'<a href="#contatti">Contatti</a>';
 // una moto alla volta: il menu in alto sceglie quale mostrare (#id nell'indirizzo, quindi anche i link diretti funzionano)
 function mostra(id,scroll){
