@@ -155,7 +155,7 @@ footer .brand{font-size:1.6rem}
   <figcaption id="lbcap"></figcaption>
 </div>
 
-<script src="moto.js?v=20261014a"></script>
+<script src="moto.js?v=20261014b"></script>
 <script>
 const SETS=MOTO.map(m=>m.foto);
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -196,6 +196,8 @@ document.getElementById('nav').innerHTML=MOTO.map(m=>`<a href="#${esc(m.id)}">${
 function mostra(id,scroll){
   const ok=MOTO.some(m=>m.id===id); if(!ok)return;
   el.querySelectorAll('.moto').forEach(sec=>sec.hidden=sec.id!==id);
+  const m=MOTO.find(m=>m.id===id);
+  document.getElementById('wa').href=waLink('Ciao Mauro, ti scrivo per la moto in vendita: '+m.titolo+' '+m.corsivo+'.');  // il messaggio nomina la moto che si sta guardando
   document.querySelectorAll('#nav a').forEach(a=>{if(a.hash==='#'+id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
   if(scroll)window.scrollTo({top:0,behavior:'smooth'});
 }
